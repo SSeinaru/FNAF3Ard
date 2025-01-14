@@ -876,6 +876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fnaf 3 Improved
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7914cc3d672b10b488a2ac5eeb65aad8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1405102504125100072, guid: 7914cc3d672b10b488a2ac5eeb65aad8,
         type: 3}
       propertyPath: m_LocalRotation.w
