@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
@@ -9,7 +10,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private LayerMask buttonMask;
     [SerializeField] private KeyCode inputButton = KeyCode.Mouse0;
 
-    [SerializeField] private 
     void Start()
     {
         
@@ -24,16 +24,14 @@ public class PlayerInteract : MonoBehaviour
         RaycastHit hitInfo;
         if (Physics.Raycast(ray, out hitInfo, distance, buttonMask))
         {
-            if (hitInfo.collider.GetComponent<Interactable>() != null)
-            {
-                Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-
-                if (Input.GetKeyDown(inputButton))
+            if (Input.GetKeyDown(inputButton))
+             {
+                /*ScreenButton button = hitInfo.collider.GetComponent<ScreenButton>();
+                if (button != null)
                 {
-                    Debug.Log("Interacted with button");
-                    //interactable.BaseInteract();
-                }
-            }
+                    button.OnButtonPress();
+                }*/
+             }
         }
             
     }
