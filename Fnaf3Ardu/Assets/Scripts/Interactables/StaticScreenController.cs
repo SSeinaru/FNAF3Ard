@@ -8,6 +8,8 @@ public class StaticScreenController : MonoBehaviour
     [Header("Screen Settings")]
     [SerializeField] private Transform screenCamera;
 
+    [SerializeField] private Transform ventCamera;
+
     [Header("Camera Positions")]
     [SerializeField] private List<Transform> cameraPositions = new List<Transform>();
 
@@ -48,10 +50,16 @@ public class StaticScreenController : MonoBehaviour
 
     public void SetCameraPosition(int index)
     {
-        if (index >= 0 && index <= cameraPositions.Count)
+        if (index >= 0 && index <= 9)
         {
             screenCamera.position = cameraPositions[index].position;
             screenCamera.rotation = cameraPositions[index].rotation;
+            Debug.Log(cameraPositions[index].position);
+        }
+        else if (index >= 10 && index <= cameraPositions.Count)
+        {
+            ventCamera.position = cameraPositions[index].position;
+            ventCamera.rotation = cameraPositions[index].rotation;
             Debug.Log(cameraPositions[index].position);
         }
     }

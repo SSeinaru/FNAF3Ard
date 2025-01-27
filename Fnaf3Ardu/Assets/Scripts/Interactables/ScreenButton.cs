@@ -12,7 +12,8 @@ public class ScreenButton : MonoBehaviour
     [SerializeField] private Animator staticAnimation;
 
     private StaticScreenController _screenController;
-    private Dictionary<string, System.Action> _buttonActions;
+    private Dictionary<string, System.Action> _mainButtonActions;
+    private Dictionary<string, System.Action> _ventButtonActions;
 
 
     private void Start()
@@ -23,7 +24,7 @@ public class ScreenButton : MonoBehaviour
 
     private void SetupButtonActions()
     {
-        _buttonActions = new Dictionary<string, System.Action>
+        _mainButtonActions = new Dictionary<string, System.Action>
         {
             { "CAM01", () => _screenController.SetCameraPosition(0) },
             { "CAM02", () => _screenController.SetCameraPosition(1) },
@@ -35,21 +36,33 @@ public class ScreenButton : MonoBehaviour
             { "CAM08", () => _screenController.SetCameraPosition(7) },
             { "CAM09", () => _screenController.SetCameraPosition(8) },
             { "CAM10", () => _screenController.SetCameraPosition(9) },
-            // Add more button actions here
+        };
+        _ventButtonActions = new Dictionary<string, System.Action>
+        {
+            { "CAM11", () => _screenController.SetCameraPosition(10) },
+            { "CAM12", () => _screenController.SetCameraPosition(11) },
+            { "CAM13", () => _screenController.SetCameraPosition(12) },
+            { "CAM14", () => _screenController.SetCameraPosition(13) },
+            { "CAM15", () => _screenController.SetCameraPosition(14) },
+
         };
     }
 
     public void OnButtonPress()
     {
         ButtonPressEffect();
-
         
-        Debug.Log(staticAnimation.GetBool("CamChange"));
-        if (_buttonActions.ContainsKey(buttonID))
+        if (_mainButtonActions.ContainsKey(buttonID))
         {
             
-            _buttonActions[buttonID].Invoke();
+            _mainButtonActions[buttonID].Invoke();
             
+        }
+        else if (_ventButtonActions.ContainsKey(buttonID))
+        {
+
+            _ventButtonActions[buttonID].Invoke();
+
         }
         else
         {
@@ -57,15 +70,8 @@ public class ScreenButton : MonoBehaviour
         }
     }
 
-    IEnumerator ButtonPressEffect()
+    private void ButtonPressEffect()
     {
-        staticAnimation.SetBool("CamChange", true);
-        Debug.Log(staticAnimation.GetBool("CamChange"));
-
-        yield return new WaitForEndOfFrame();
-
-        staticAnimation.SetBool("CamChange", false);
-
-        yield return null;
+        staticAnimation.SetTrigger("CamTrans");
     }
 }
