@@ -1889,7 +1889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &489481088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4466,6 +4466,71 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1489023103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1497912463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497912465}
+  - component: {fileID: 1497912464}
+  m_Layer: 0
+  m_Name: ArduCameraController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1497912464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497912463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a45148c1284ac5469d9811eea038a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenCamera: {fileID: 839309760}
+  ventCamera: {fileID: 1676389872}
+  cameraPositions:
+  - {fileID: 915180739}
+  - {fileID: 13812299}
+  - {fileID: 1113951993}
+  - {fileID: 100510496}
+  - {fileID: 1424204587}
+  - {fileID: 943675744}
+  - {fileID: 873359907}
+  - {fileID: 1377856997}
+  - {fileID: 18720176}
+  - {fileID: 1576679653}
+  - {fileID: 892923082}
+  - {fileID: 638531030}
+  - {fileID: 643445036}
+  - {fileID: 2055069104}
+  - {fileID: 1575602613}
+  portName: COM3
+  baudRate: 115200
+  ledStates: 
+--- !u!4 &1497912465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497912463}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.1267977, y: -0.7044605, z: 18.495836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1540153175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1502929395244328989, guid: 047cd10a8a4087047a9694610754b28e,
@@ -10418,6 +10483,7 @@ GameObject:
   - component: {fileID: 4135751943714477694}
   - component: {fileID: 7214470532156428358}
   - component: {fileID: 7214470532156428359}
+  - component: {fileID: 7214470532156428360}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_02.mo
   m_TagString: Untagged
@@ -11108,6 +11174,7 @@ GameObject:
   - component: {fileID: 5943160684315082766}
   - component: {fileID: 5943160684315082767}
   - component: {fileID: 5943160684315082768}
+  - component: {fileID: 5943160684315082769}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_12.mo
   m_TagString: Untagged
@@ -13433,6 +13500,7 @@ GameObject:
   - component: {fileID: 1688592724894819221}
   - component: {fileID: 1688592724894819222}
   - component: {fileID: 1688592724894819223}
+  - component: {fileID: 1688592724894819224}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_14.mo
   m_TagString: Untagged
@@ -14905,6 +14973,7 @@ GameObject:
   - component: {fileID: 4298498984418162900}
   - component: {fileID: 4298498984418162901}
   - component: {fileID: 4298498984418162902}
+  - component: {fileID: 4298498984418162903}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_06.mo
   m_TagString: Untagged
@@ -16087,6 +16156,7 @@ GameObject:
   - component: {fileID: 5689291592690831770}
   - component: {fileID: 8660576075052167817}
   - component: {fileID: 8660576075052167818}
+  - component: {fileID: 8660576075052167819}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_10.mo
   m_TagString: Untagged
@@ -17854,9 +17924,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052622185141944716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM14
+  staticAnimation: {fileID: 6996553361200735544}
+--- !u!114 &1688592724894819224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052622185141944716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM14
@@ -20662,6 +20746,7 @@ GameObject:
   - component: {fileID: 1035308545913749871}
   - component: {fileID: 7377003085587375438}
   - component: {fileID: 7377003085587375439}
+  - component: {fileID: 7377003085587375440}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_11.mo
   m_TagString: Untagged
@@ -22989,6 +23074,7 @@ GameObject:
   - component: {fileID: 1178100971830867730}
   - component: {fileID: 5028651163847861875}
   - component: {fileID: 5028651163847861876}
+  - component: {fileID: 5028651163847861877}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_03.mo
   m_TagString: Untagged
@@ -25417,6 +25503,7 @@ GameObject:
   - component: {fileID: 827891562721284643}
   - component: {fileID: 6636751136937008207}
   - component: {fileID: 6636751136937008208}
+  - component: {fileID: 6636751136937008209}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_09.mo
   m_TagString: Untagged
@@ -25959,6 +26046,7 @@ GameObject:
   - component: {fileID: 4723632473636422017}
   - component: {fileID: 7494639141134007204}
   - component: {fileID: 7494639141134007205}
+  - component: {fileID: 7494639141134007206}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_15.mo
   m_TagString: Untagged
@@ -31993,6 +32081,7 @@ GameObject:
   - component: {fileID: 4563062129419884895}
   - component: {fileID: 5485707702872845798}
   - component: {fileID: 5485707702872845799}
+  - component: {fileID: 5485707702872845800}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_13.mo
   m_TagString: Untagged
@@ -34473,9 +34562,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267351860374542798}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM06
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &4298498984418162903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267351860374542798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM06
@@ -38650,6 +38753,7 @@ GameObject:
   - component: {fileID: 2940652107774685413}
   - component: {fileID: 4996400129340789106}
   - component: {fileID: 4996400129340789107}
+  - component: {fileID: 4996400129340789108}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_04.mo
   m_TagString: Untagged
@@ -38685,9 +38789,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4996400129340789105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM04
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &4996400129340789108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4996400129340789105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM04
@@ -38856,9 +38974,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2558844472660294699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM03
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &5028651163847861877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2558844472660294699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM03
@@ -42239,9 +42371,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3887716875268820129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM13
+  staticAnimation: {fileID: 6996553361200735544}
+--- !u!114 &5485707702872845800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887716875268820129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM13
@@ -45551,9 +45697,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657280674471424378}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM12
+  staticAnimation: {fileID: 6996553361200735544}
+--- !u!114 &5943160684315082769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657280674471424378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM12
@@ -45752,6 +45912,7 @@ GameObject:
   - component: {fileID: 3587035246640456268}
   - component: {fileID: 5993528889579146383}
   - component: {fileID: 5993528889579146384}
+  - component: {fileID: 5993528889579146385}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_01.mo
   m_TagString: Untagged
@@ -45787,9 +45948,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5993528889579146382}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM01
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &5993528889579146385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993528889579146382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM01
@@ -50685,9 +50860,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2918726796866003009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM09
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &6636751136937008209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2918726796866003009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM09
@@ -51327,6 +51516,7 @@ GameObject:
   - component: {fileID: 3292094519613631315}
   - component: {fileID: 6728032779692648832}
   - component: {fileID: 6728032779692648833}
+  - component: {fileID: 6728032779692648834}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_08.mo
   m_TagString: Untagged
@@ -51362,9 +51552,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6728032779692648831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM08
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &6728032779692648834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728032779692648831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM08
@@ -55316,9 +55520,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 571509682665468654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM02
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &7214470532156428360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571509682665468654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM02
@@ -56312,9 +56530,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123962025275646042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM11
+  staticAnimation: {fileID: 6996553361200735544}
+--- !u!114 &7377003085587375440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123962025275646042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM11
@@ -57072,9 +57304,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3010355541739998945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM15
+  staticAnimation: {fileID: 6996553361200735544}
+--- !u!114 &7494639141134007206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010355541739998945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM15
@@ -62942,6 +63188,7 @@ GameObject:
   - component: {fileID: 8335690353288646763}
   - component: {fileID: 8540623644301074982}
   - component: {fileID: 8540623644301074983}
+  - component: {fileID: 8540623644301074984}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_05.mo
   m_TagString: Untagged
@@ -62977,9 +63224,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8540623644301074980}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM05
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &8540623644301074984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8540623644301074980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM05
@@ -63913,9 +64174,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442642343616512281}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM10
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &8660576075052167819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442642343616512281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM10
@@ -66927,6 +67202,7 @@ GameObject:
   - component: {fileID: 9220650254892146616}
   - component: {fileID: 9220650254892146617}
   - component: {fileID: 9220650254892146618}
+  - component: {fileID: 9220650254892146619}
   m_Layer: 21
   m_Name: ENV_MOD_New_Buttons_07.mo
   m_TagString: Untagged
@@ -67749,9 +68025,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9091160660435837359}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d351da7369a8604f8b0e7a59c5b12b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonID: CAM07
+  staticAnimation: {fileID: 7989417177157251604}
+--- !u!114 &9220650254892146619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091160660435837359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e926a8ea3dc190488dc6cb4c6a1fa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   buttonID: CAM07
@@ -67762,6 +68052,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 364367399}
   - {fileID: 489481089}
+  - {fileID: 1497912465}
   - {fileID: 1197046515}
   - {fileID: 867158271}
   - {fileID: 832575519}

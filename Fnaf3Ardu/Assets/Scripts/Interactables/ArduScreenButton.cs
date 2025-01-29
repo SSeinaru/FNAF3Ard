@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.IO.Ports;
 
 public class ArduScreenButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Button Configuration")]
+    [SerializeField] private string buttonID;
+
+    [Header("Visual Feedback")]
+    [SerializeField] private Animator staticAnimation;
+
+    private ArduScreenController _screenController;
+
+    private void Start()
     {
-        
+        _screenController = FindObjectOfType<ArduScreenController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonPress()
     {
-        
+        ButtonPressEffect();
+        SendButtonPressToArduino();
+    }
+
+    private void ButtonPressEffect()
+    {
+        staticAnimation.SetTrigger("CamTrans");
+    }
+
+    private void SendButtonPressToArduino()
+    {
+        _screenController.SendButtonCommand(buttonID);
     }
 }

@@ -18,6 +18,7 @@ public class StaticScreenController : MonoBehaviour
     [SerializeField] private float maxRaycastDistance = 3f;
 
     private Camera _mainCamera;
+    internal object _serialPort;
 
     void Start()
     {
